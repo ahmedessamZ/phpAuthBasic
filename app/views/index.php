@@ -1,16 +1,11 @@
 <?php
 require APPROOT .'/views/includes/head.php';
+require APPROOT .'/views/includes/navigation.php';
 ?>
 
 <div id="section-landing">
-
-    <?php
-        require APPROOT .'/views/includes/navigation.php';
-    ?>
-
     <div id="wrapper-landing">
-        <H1>Human beings learn</H1>
-        <H2>Until the day they die</H2>
+        <h1>Human beings learn</h1>
+        <h2>Until the day they die</h2>
     </div>
-
 </div>

@@ -6,6 +6,7 @@ html,body {
     top: 0;
     bottom: 0;
     font-family: 'Lato', sans-serif;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef); /* Added a subtle linear gradient background */
 }
 .top-nav {
     display: block;
@@ -15,7 +16,9 @@ html,body {
     padding: 0;
     position: absolute;
     right: 6%;
-    top: 2%;
+    top: 50%;
+    transform: translateY(-50%); /* Center align vertically */
+    list-style: none; /* Remove default list styling */
 }
 
 .top-nav ul li {
@@ -25,9 +28,10 @@ html,body {
 }
 
 .top-nav ul li a {
-color: azure;
+    color: azure;
     font-size: 18px;
     text-decoration: none;
+    transition: color 0.2s ease; /* Add a hover effect on nav links for improved interactivity */
 }
 
 .top-nav ul li a:hover {
@@ -35,12 +39,13 @@ color: azure;
     transition: .15s ease-in;
 }
 
-#section-landing{
+#section-landing {
+    background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url("../img/banner.jpg") no-repeat center;
     background-size: cover;
-    background: url("../img/banner.jpg") no-repeat center;
     height: 100%;
     width: 100%;
 }
+
 #wrapper-landing {
     position: relative;
     text-align: center;
@@ -50,26 +55,25 @@ color: azure;
 }
 
 #wrapper-landing h1 {
-
-    font-size: 50px;
-    color: azure;
+    font-size: 55px; /* slightly larger */
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
     font-weight: 80;
     font-family: "Lucida Console", "Courier New", monospace;
 }
 
 #wrapper-landing h2 {
-
-
-    color: azure;
+    font-size: 24px;
+    color: #eee;
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.7);
     font-weight: 20;
     font-family: "Lucida Console", "Courier New", monospace;
-
 }
+
 .btn-login {
     border: 1px solid azure;
     padding: 10px 30px;
 }
-
 
 #navbar {
     position: fixed; /* Ensure the navbar stays at the top */
@@ -77,8 +81,8 @@ color: azure;
     left: 0;
     width: 100%; /* Make the navbar span the full width */
     height: 70px;
-    background-color: black;
-    box-shadow: 0px 0px 10px gray;
+    background-color: rgba(0,0,0,0.85); /* slight transparency for modern look */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
     z-index: 1000; /* Ensure it stays above other elements */
 }
 
@@ -88,6 +92,7 @@ color: azure;
     position: relative;
     top: 20%;
 }
+
 .container-reg {
     width: 100%;
     margin: 0 auto;
@@ -99,17 +104,34 @@ color: azure;
     width: 80%;
     margin: 0 auto;
     text-align: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wrapper-login:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
 }
 
 .wrapper-login input {
     width: 200px;
     height: 26px;
-    border: 1px solid #cccccc;
-    background-color: #f5f5f5;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background: transparent;
     font-size: 18px;
     display: block;
     position: relative;
     margin: 20px auto;
+    transition: border-color 0.3s ease;
+}
+
+.wrapper-login input:focus {
+    border-color: #4a90e2;
+    outline: none;
 }
 
 input::placeholder {
@@ -160,8 +182,7 @@ input::placeholder {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    padding-top: 90px; /* Add padding to account for the fixed navbar */
+
 }
 
 #profile-content {
@@ -213,8 +234,18 @@ input::placeholder {
 }
 
 @media (max-width: 768px) {
-    #profile-content {
+    #profile-content,
+    .container-reg .wrapper-login,
+    .container-login .wrapper-login {
         padding: 1.5rem;
+    }
+
+    #wrapper-landing h1 {
+        font-size: 40px;
+    }
+
+    #wrapper-landing h2 {
+        font-size: 20px;
     }
 
     #profile-content h1 {
