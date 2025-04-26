@@ -72,10 +72,14 @@ color: azure;
 
 
 #navbar {
-    width: 100%;
+    position: fixed; /* Ensure the navbar stays at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Make the navbar span the full width */
     height: 70px;
     background-color: black;
     box-shadow: 0px 0px 10px gray;
+    z-index: 1000; /* Ensure it stays above other elements */
 }
 
 .container-login {
@@ -149,14 +153,79 @@ input::placeholder {
     display: block;
 }
 
-#profile-content {
-    position: relative;
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
-    top: 15%;
+/* Modernized Profile Page Styles */
+#profile {
+    min-height: 100vh;
+    background: #f4f7fa; /* Light background for the page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding-top: 90px; /* Add padding to account for the fixed navbar */
 }
-#profile{
-    height: 100%;
-    background: green;
+
+#profile-content {
+    max-width: 600px;
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for modern look */
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#profile-content:hover {
+    transform: translateY(-5px); /* Slight hover effect */
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+#profile-content h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+#profile-content h2 {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+    font-weight: normal;
+}
+
+#profile-content p {
+    font-size: 1rem;
+    color: #444;
+    background: #f9f9f9;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#profile-content p span {
+    font-weight: bold;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    #profile-content {
+        padding: 1.5rem;
+    }
+
+    #profile-content h1 {
+        font-size: 1.8rem;
+    }
+
+    #profile-content h2 {
+        font-size: 1rem;
+    }
+
+    #profile-content p {
+        font-size: 0.9rem;
+    }
 }
