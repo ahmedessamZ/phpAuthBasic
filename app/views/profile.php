@@ -18,7 +18,7 @@ require APPROOT .'/views/includes/head.php';
     ?>
 </div>
 
-<div id="pro">
+<div id="profile-content">
     <h1>***** My Profile *****</h1>
     <h2>User Data</h2>
 
