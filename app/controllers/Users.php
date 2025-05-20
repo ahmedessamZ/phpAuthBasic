@@ -84,10 +84,10 @@ class Users extends Controller {
             if (empty($data['usernameError']) && empty($data['emailError']) &&
                 empty($data['passwordError']) && empty($data['confirmPasswordError'])) {
 
-                $data['password'] = password_hash($data['password'], PASSWORD_BCRYPT);
-
-                if ($this->userModel->register($data)) {
+                $data['password'] = password_hash($data['password'], PASSWORD_BCRYPT);                if ($this->userModel->register($data)) {
+                    flash('You are now registered! Please log in', 'You are now registered! Please log in', 'success');
                     header('location:' . URLROOT . '/users/login');
+                    exit();
                 } else {
                     die('something went wrong');
                 }
@@ -134,6 +134,7 @@ class Users extends Controller {
 
                 if ($loggedInUser) {
                     $this->createUserSession($loggedInUser);
+ 
                 } else {
                     $data['passwordError'] = 'Password is incorrect, please try again.';
                 }
@@ -141,19 +142,20 @@ class Users extends Controller {
         }
         
         $this->view('users/login', $data);
-    }
-
-    public function createUserSession($user){
+    }    public function createUserSession($user){
         $_SESSION ['user_id'] = $user->id;
         $_SESSION ['username'] = $user->username;
         $_SESSION ['email'] = $user->email;
+        flash('Welcome back, ' . $user->username . '!', 'Welcome back, ' . $user->username . '!', 'success');
         header('location:' . URLROOT . '/pages/profile');
-    }
-    public function logout() {
+        exit();
+    }    public function logout() {
         unset($_SESSION['user_id']);
         unset($_SESSION['email']);
         unset($_SESSION['password']);
+        flash('You have been logged out successfully', 'You have been logged out successfully', 'info');
         header('location:'. URLROOT . '/users/login');
+        exit();
     }
 
 

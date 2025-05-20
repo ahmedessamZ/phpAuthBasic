@@ -12,28 +12,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Search functionality
-const searchBar = document.querySelector('.search-bar');
-const searchButton = document.querySelector('.search-button');
-
-if (searchBar && searchButton) {
-    searchButton.addEventListener('click', performSearch);
-    searchBar.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            performSearch();
-        }
-    });
-}
-
-function performSearch() {
-    const searchTerm = searchBar.value.trim();
-    if (searchTerm) {
-        // You can implement the actual search functionality here
-        alert('Searching for: ' + searchTerm);
-        // Reset the search bar
-        searchBar.value = '';
-    }
-}
 
 // Newsletter form submission
 const newsletterForm = document.querySelector('.newsletter-form');
@@ -70,4 +48,55 @@ document.querySelectorAll('.feature-card').forEach(card => {
 // Add loading animation to the page
 document.addEventListener('DOMContentLoaded', function() {
     document.body.classList.add('loaded');
+});
+
+// Toaster Notification System
+class ToasterNotification {
+    constructor() {
+        this.createToasterContainer();
+    }
+
+    createToasterContainer() {
+        if (!document.getElementById('toaster-container')) {
+            const container = document.createElement('div');
+            container.id = 'toaster-container';
+            document.body.appendChild(container);
+        }
+    }
+
+    show(message, type = 'success') {
+        const toast = document.createElement('div');
+        toast.className = `toaster-notification ${type}`;
+        toast.textContent = message;
+
+        const container = document.getElementById('toaster-container');
+        container.appendChild(toast);
+
+        // Trigger entrance animation
+        setTimeout(() => {
+            toast.classList.add('show');
+        }, 10);
+
+        // Remove the toast after 3 seconds
+        setTimeout(() => {
+            toast.classList.remove('show');
+            setTimeout(() => {
+                container.removeChild(toast);
+            }, 300); // Wait for exit animation to complete
+        }, 3000);
+    }
+}
+
+// Initialize toaster
+const toaster = new ToasterNotification();
+
+// Check for flash messages when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    const flashMessage = document.querySelector('.flash-message');
+    if (flashMessage) {
+        const message = flashMessage.textContent;
+        const type = flashMessage.classList.contains('success') ? 'success' : 'error';
+        toaster.show(message, type);
+        flashMessage.remove(); // Remove the original message
+    }
 });

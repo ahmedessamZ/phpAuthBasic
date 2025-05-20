@@ -4,11 +4,6 @@ require APPROOT .'/views/includes/navigation.php';
 ?>
 
 <div id="section-landing">
-    <div class="search-container">
-        <input type="text" class="search-bar" placeholder="Search...">
-        <button class="search-button"><i class="fas fa-search"></i></button>
-    </div>
-    
     <div id="wrapper-landing">
         <h1>Human beings learn</h1>
         <h2>Until the day they die</h2>

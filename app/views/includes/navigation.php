@@ -1,3 +1,6 @@
+<?php if(isset($_SESSION['flash_message'])): ?>
+    <?php echo flash(); ?>
+<?php endif; ?>
 <nav id="navbar" class="top-nav">
     <ul>
         <li>
@@ -24,3 +27,9 @@
         </li>
     </ul>
 </nav>
+<?php
+    // Display flash messages if any
+    if (function_exists('flash')) {
+        echo flash();
+    }
+?>
