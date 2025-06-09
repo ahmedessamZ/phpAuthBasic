@@ -7,7 +7,7 @@ require APPROOT .'/views/includes/navigation.php';
     <div id="wrapper-landing">
         <h1>Human beings learn</h1>
         <h2>Until the day they die</h2>
-        <p class="welcome-text">Welcome to our learning community. Explore, Learn, Grow.</p>
+        <p class="welcome-text">Welcome to our learning cources. Explore, Learn, Grow.</p>
         <div class="cta-buttons">
             <a href="#features" class="btn-primary">Get Started</a>
             <a href="#learn-more" class="btn-secondary">Learn More</a>
