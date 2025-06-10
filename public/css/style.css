@@ -411,59 +411,6 @@ input::placeholder {
     line-height: 1.6;
 }
 
-/* Newsletter Section */
-.newsletter-section {
-    background: linear-gradient(135deg, #c2a86b, #e3f2fd);
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.newsletter-content {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.newsletter-content h2 {
-    color: white;
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.newsletter-content p {
-    color: white;
-    margin-bottom: 30px;
-}
-
-.newsletter-form {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-}
-
-.newsletter-form input[type="email"] {
-    padding: 12px 20px;
-    border-radius: 25px;
-    border: none;
-    width: 300px;
-    font-size: 16px;
-}
-
-.btn-subscribe {
-    padding: 12px 30px;
-    border-radius: 25px;
-    border: none;
-    background: #333;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn-subscribe:hover {
-    background: #444;
-    transform: translateY(-2px);
-}
-
 /* Toaster Notifications */
 #toaster-container {
     position: fixed;

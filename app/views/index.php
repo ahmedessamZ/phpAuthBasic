@@ -35,14 +35,3 @@ require APPROOT .'/views/includes/navigation.php';
         </div>
     </div>
 </div>
-
-<div class="newsletter-section">
-    <div class="newsletter-content">
-        <h2>Stay Updated</h2>
-        <p>Subscribe to our newsletter for the latest updates and learning resources.</p>
-        <form class="newsletter-form">
-            <input type="email" placeholder="Enter your email" required>
-            <button type="submit" class="btn-subscribe">Subscribe</button>
-        </form>
-    </div>
-</div>
