@@ -93,3 +93,60 @@ require APPROOT .'/views/includes/navigation.php';
         </div>
     </div>
 </div>
+
+<div class="why-choose-section">
+    <div class="why-choose-content">
+        <h2 class="section-title">Why Choose Our Platform</h2>
+        <p class="section-subtitle">Join thousands of learners achieving their goals</p>
+        
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number" data-value="50000">50,000+</div>
+                <div class="stat-label">Active Students</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-value="200">200+</div>
+                <div class="stat-label">Expert Instructors</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-value="300">300+</div>
+                <div class="stat-label">Courses Available</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-value="95">95%</div>
+                <div class="stat-label">Success Rate</div>
+            </div>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>Expert-Led Learning</h3>
+                <p>Learn from industry professionals with real-world experience</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>Flexible Schedule</h3>
+                <p>Study at your own pace with lifetime access to courses</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <h3>1-on-1 Mentoring</h3>
+                <p>Get personalized guidance from experienced mentors</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h3>Certified Programs</h3>
+                <p>Earn industry-recognized certificates upon completion</p>
+            </div>
+        </div>
+    </div>
+</div>
