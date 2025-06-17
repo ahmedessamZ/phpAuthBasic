@@ -35,3 +35,61 @@ require APPROOT .'/views/includes/navigation.php';
         </div>
     </div>
 </div>
+
+<div class="learning-paths-section">
+    <h2 class="section-title">Learning Paths</h2>
+    <p class="section-subtitle">Choose Your Journey to Success</p>
+    
+    <div class="paths-container">
+        <div class="path-card">
+            <div class="path-icon">
+                <i class="fas fa-code"></i>
+            </div>
+            <h3>Web Development</h3>
+            <p class="path-description">Master modern web technologies from front-end to back-end development.</p>
+            <ul class="path-features">
+                <li><i class="fas fa-check-circle"></i> HTML, CSS, JavaScript</li>
+                <li><i class="fas fa-check-circle"></i> React & Node.js</li>
+                <li><i class="fas fa-check-circle"></i> Database Design</li>
+            </ul>
+            <div class="path-footer">
+                <span class="duration"><i class="far fa-clock"></i> 12 Weeks</span>
+                <a href="#" class="path-btn">Learn More</a>
+            </div>
+        </div>
+
+        <div class="path-card">
+            <div class="path-icon">
+                <i class="fas fa-robot"></i>
+            </div>
+            <h3>AI & Machine Learning</h3>
+            <p class="path-description">Dive into the world of artificial intelligence and data science.</p>
+            <ul class="path-features">
+                <li><i class="fas fa-check-circle"></i> Python Programming</li>
+                <li><i class="fas fa-check-circle"></i> Neural Networks</li>
+                <li><i class="fas fa-check-circle"></i> Deep Learning</li>
+            </ul>
+            <div class="path-footer">
+                <span class="duration"><i class="far fa-clock"></i> 16 Weeks</span>
+                <a href="#" class="path-btn">Learn More</a>
+            </div>
+        </div>
+
+        <div class="path-card">
+            <div class="path-icon">
+                <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>Mobile Development</h3>
+            <p class="path-description">Create powerful mobile applications for iOS and Android.</p>
+            <ul class="path-features">
+                <li><i class="fas fa-check-circle"></i> Swift & Kotlin</li>
+                <li><i class="fas fa-check-circle"></i> Cross-platform Dev</li>
+                <li><i class="fas fa-check-circle"></i> App Publishing</li>
+            </ul>
+            <div class="path-footer">
+                <span class="duration"><i class="far fa-clock"></i> 14 Weeks</span>
+                <a href="#" class="path-btn">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>

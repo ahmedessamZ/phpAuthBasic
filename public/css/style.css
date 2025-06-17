@@ -1070,6 +1070,146 @@ input::placeholder {
     color: #333;
 }
 
+/* Learning Paths Section */
+.learning-paths-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    text-align: center;
+}
+
+.section-subtitle {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.paths-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.path-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.path-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, #c2a86b, #e3f2fd);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.path-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.path-card:hover::before {
+    transform: scaleX(1);
+}
+
+.path-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #c2a86b, #e3f2fd);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.path-icon i {
+    font-size: 36px;
+    color: white;
+}
+
+.path-card h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.path-description {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.path-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px;
+    text-align: left;
+}
+
+.path-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    color: #555;
+}
+
+.path-features li i {
+    color: #c2a86b;
+}
+
+.path-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.duration {
+    color: #666;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.duration i {
+    color: #c2a86b;
+}
+
+.path-btn {
+    padding: 8px 20px;
+    background: linear-gradient(135deg, #c2a86b, #e3f2fd);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.path-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(194, 168, 107, 0.3);
+}
+
 @media (max-width: 768px) {
     #profile-content,
     .container-reg .wrapper-login,
@@ -1168,5 +1308,15 @@ input::placeholder {
         flex-direction: column;
         text-align: center;
         gap: 5px;
+    }
+
+    .path-card {
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    .section-subtitle {
+        font-size: 16px;
+        margin-bottom: 30px;
     }
 }
