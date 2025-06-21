@@ -13,3 +13,4 @@ require APPROOT .'/views/includes/navigation.php';
         <p>Email: <?php echo $_SESSION['email']; ?></p>
     </div>
 </div>
+<?php require APPROOT .'/views/includes/footer.php'; ?>

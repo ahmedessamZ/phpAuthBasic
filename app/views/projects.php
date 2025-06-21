@@ -371,3 +371,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+
+<?php require APPROOT .'/views/includes/footer.php'; ?>

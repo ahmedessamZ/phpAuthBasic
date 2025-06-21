@@ -34,3 +34,5 @@ require APPROOT .'/views/includes/head.php';
         </form>
     </div>
 </div>
+
+<?php require APPROOT .'/views/includes/footer.php'; ?>

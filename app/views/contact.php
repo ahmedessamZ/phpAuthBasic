@@ -101,6 +101,8 @@ require APPROOT .'/views/includes/navigation.php';
     </div>
 </div>
 
+<?php require APPROOT .'/views/includes/footer.php'; ?>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     // Animate info cards on scroll
