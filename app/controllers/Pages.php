@@ -104,4 +104,12 @@ class Pages extends Controller {
 
         $this->view('profile', $data);
     }
+
+    public function services() {
+        $data = [
+            'title' => 'Our Services',
+            'description' => 'This page lists our main services offered to clients.'
+        ];
+        $this->view('services', $data);
+    }
 }
