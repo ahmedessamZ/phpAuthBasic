@@ -145,7 +145,7 @@ require APPROOT .'/views/includes/navigation.php';
                     <i class="fas fa-certificate"></i>
                 </div>
                 <h3>Certified Programs</h3>
-                <p>Earn industry-recognized certificates upon completion</p>
+                <p>Earn industry-recognized certificates upon completion of the course</p>
             </div>
         </div>
     </div>
