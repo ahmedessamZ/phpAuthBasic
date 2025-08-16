@@ -131,7 +131,7 @@ require APPROOT .'/views/includes/navigation.php';
                     <i class="fas fa-clock"></i>
                 </div>
                 <h3>Flexible Schedule</h3>
-                <p>Study at your own pace with lifetime access to courses</p>
+                <p>Study at your own home with lifetime access to courses</p>
             </div>
             <div class="benefit-card">
                 <div class="benefit-icon">
